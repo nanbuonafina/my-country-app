@@ -9,6 +9,8 @@
 **Frontend:**
 Simplesmente abra o arquivo "index.html" no navegador (ou utilize um servidor HTTP local como o do VSCode).
 
+***
+
 **EN**
 ### How to run this application:
 
