@@ -2,9 +2,9 @@
 ### Como executar a aplicação
 
 **Backend:**
-Vá para a pasta "backend" digitando ```cd backend``` no seu terminal.
-Instale as dependências: ```pip install -r requirements.txt```
-Rode o backend com: ```uvicorn main:app --reload```
+1. Vá para a pasta "backend" digitando ```cd backend``` no seu terminal.
+2. Instale as dependências: ```pip install -r requirements.txt```
+3. Rode o backend com: ```uvicorn main:app --reload```
 
 **Frontend:**
 Simplesmente abra o arquivo "index.html" no navegador (ou utilize um servidor HTTP local como o do VSCode).
@@ -13,9 +13,9 @@ Simplesmente abra o arquivo "index.html" no navegador (ou utilize um servidor HT
 ### How to run this application:
 
 **Back-End:**
-Go to the backend folder by typing: ```cd backend```
-Install all dependencies: ```pip install -r requirements.txt```
-Run backend with: ```uvicorn main:app --reload```
+1. Go to the backend folder by typing: ```cd backend```
+2. Install all dependencies: ```pip install -r requirements.txt```
+3. Run backend with: ```uvicorn main:app --reload```
 
 **Front-End:**
 Open the "index.html" file in your browser or use a local server HTTP like VsCode.
