@@ -27,7 +27,7 @@ function displayCountries(countries) {
                         <h5 class="card-title">${country.name.common}</h5>
                         <p class="card-text">Capital: ${country.capital}</p>
                         <p class="card-text">Region: ${country.region}</p>
-                        <a href="country_details.html?country=${country.name.common}" class="btn btn-primary">Details</a>
+                        <a href="country_details.html?country=${country.name.common}" class="btn btn-dark">Details</a>
                     </div>
                 </div>
             </div>
@@ -43,6 +43,19 @@ async function fetchCountryDetails() {
     const response = await fetch(url);
     const country = await response.json();
 
+    // Moedas
+    const currencies = country.currencies
+        ? Object.values(country.currencies).map(currency => currency.name).join(', ')
+        : 'N/A';
+
+    // Domínio de internet (TLD)
+    const tld = country.tld ? country.tld.join(', ') : 'N/A';
+
+    // Código de discagem internacional
+    const callingCode = country.idd && country.idd.root
+        ? `${country.idd.root}${country.idd.suffixes ? country.idd.suffixes.join(', ') : ''}`
+        : 'N/A';
+
     const countryDetails = document.getElementById('countryDetails');
     countryDetails.innerHTML = `
         <div class="col-md-6">
@@ -55,6 +68,9 @@ async function fetchCountryDetails() {
             <p><strong>Subregion:</strong> ${country.subregion}</p>
             <p><strong>Languages:</strong> ${Object.values(country.languages).join(', ')}</p>
             <p><strong>Timezones:</strong> ${country.timezones.join(', ')}</p>
+            <p><strong>Currency:</strong> ${currencies}</p>
+            <p><strong>Top-Level Domain (TLD):</strong> ${tld}</p>
+            <p><strong>International Dialing Code:</strong> ${callingCode}</p>
         </div>
     `;
 }
