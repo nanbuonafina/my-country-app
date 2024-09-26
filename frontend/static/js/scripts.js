@@ -24,7 +24,7 @@ function displayCountries(countries) {
                 <div class="card mb-4">
                     <img src="${country.flags.png}" class="card-img-top" alt="${country.name.common} flag">
                     <div class="card-body">
-                        <h5 class="card-title">${country.name.common}</h5>
+                        <h4 class="card-title">${country.name.common}</h4>
                         <p class="card-text"> <strong>Capital: </strong>${country.capital}</p>
                         <p class="card-text"> <strong>Region: </strong>${country.region}</p>
                         <a href="country_details.html?country=${country.name.common}" class="btn btn-dark">Details</a>
