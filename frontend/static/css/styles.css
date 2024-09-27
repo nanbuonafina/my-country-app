@@ -51,3 +51,18 @@ header h1 {
         transform: translateY(-20px); /* Pulo no meio da animação */
     }
 }
+
+.info-container {
+    max-width: 600px; /* Limita a largura do card */
+    margin: 20px auto; /* Centraliza o card e adiciona margem superior e inferior */
+    background-color: white; /* Fundo branco para o card */
+    padding: 20px; /* Espaçamento interno do card */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+}
+
+.info-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
